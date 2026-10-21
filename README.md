@@ -42,8 +42,9 @@ GitHub Actions  (.github/workflows/build.yml)
 https://github.com/thuie-miles/forge/releases/download/latest/forge-debug.apk  →  your phone
 ```
 
-- **When it runs:** on every push to `main`, or by hand: Actions tab → Build APK → Run workflow. A build takes a few
-  minutes; watch it on the Actions tab, or with `gh run watch`.
+- **When it runs:** on every push to `main`, or by hand: Actions tab → Build APK → Run workflow. A build takes about a
+  minute when Gradle's cache is warm, and about three when it isn't; watch it on the Actions tab, or with
+  `gh run watch`.
 - **Version numbers:** every run gets the next number (1, 2, 3, ...). The app uses it as its version code, an internal
   number that has to go up for Android to accept an update, and shows it on screen as version 0.1.<number>.
 - **Signing:** Android only installs an update that is signed with the same key as the app already on the phone. So
