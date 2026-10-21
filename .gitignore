@@ -1,0 +1,13 @@
+# Gradle's working files and everything it builds
+.gradle/
+.kotlin/
+build/
+
+# Settings for one computer only (local.properties holds the Android SDK path), and IDE files
+local.properties
+.idea/
+*.iml
+.DS_Store
+captures/
+.externalNativeBuild/
+.cxx/

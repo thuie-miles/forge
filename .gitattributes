@@ -1,0 +1,6 @@
+# CI builds on Linux and people build on Windows too, so pin the line endings of the two launcher scripts.
+* text=auto
+gradlew text eol=lf
+*.bat text eol=crlf
+*.jar binary
+*.keystore binary

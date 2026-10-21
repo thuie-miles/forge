@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Forge</string>
+    <string name="version_label">Version %1$s</string>
+</resources>
