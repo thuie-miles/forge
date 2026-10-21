@@ -79,7 +79,10 @@ under `src/main/java/` (Android's default).
 2. **Commit and push** to `main`, with a message that says in plain words what changed.
 3. **Watch the CI run** for your commit until it's green:
    ```sh
-   run=$(gh run list --commit "$(git rev-parse HEAD)" --json databaseId -q '.[0].databaseId')  # empty for a few seconds after a push; retry
+   for i in $(seq 30); do   # a run takes a few seconds to appear after a push
+     run=$(gh run list --commit "$(git rev-parse HEAD)" --json databaseId -q '.[0].databaseId')
+     [ -n "$run" ] && break; sleep 5
+   done
    gh run watch "$run" --exit-status
    gh run view "$run" --log-failed   # when it failed: read, fix, commit, push, watch again
    ```
